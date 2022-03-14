@@ -8,9 +8,19 @@ Write a function which takes a ROT13 encoded string as input and returns a decod
 
 All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
  */
+function rot13 (str) {
+const letter = {
+  A: "N",B: "O",C: "P", D: "Q", E:"R", F:"S",
+  G:"T",H:"U",I:"V",J:"W",K:"X",L:"Y",
+  M:"Z",N:"A",O:"B",P:"C",Q:"D",
+  R:"E",S:"F",T:"G",U:"H",V:"I",
+  W:"J",X:"K",Y:"L",Z:"M"
+  }
 
-function rot13(str) {
-  return str;
+  return str
+  .split('')
+  .map(e => letter[e] ? letter[e] : e)
+  .join('')
 }
-  
+
 rot13("SERR PBQR PNZC");

@@ -18,6 +18,6 @@ function palindrome(str) {
     
     if(newString === string) return true
     else return false
-  }
+}
   
   palindrome("My age is 0, 0 si ega ym.")
